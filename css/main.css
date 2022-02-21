@@ -11,10 +11,9 @@
    1.0- Universal Element
    1.1- Body Style
 * 2- Section Style
-   2.0- 
+   2.0- Splitted Frame
 * 3- Common Style 
-   3.0- Container Section
-   3.1-  Font Family
+   3.0-  
 */
 /** 1- General Style */
 /**  1.0- Universal Element */
@@ -25,29 +24,52 @@
 }
 /** 1.1- Body Style */
 body{
-  font-family: 'DroidKufi-Regular', sans-serif;
   background-color: #F6F6F6;
 }
 /** 2- Section Style */
-/**  2.0-  */
-
-
-
-
-
-/**3- Common Style  */
-/** 3.0- Container Section */
-.container{
-  width: 80%;
-  margin: auto;
-  padding: .2rem;
+/**  2.0- Splitted Frame */
+.frame{
+  position: relative;
+  width: 550px;
+  margin-top: 2rem;
+  margin-inline: auto;
 }
-/** 3.1- Font Family */
-@font-face {
-  font-family: 'DroidKufi-Bold';
-  src: url(../fonts/DroidKufi-Bold.ttf);
+.frame::before,
+.frame::after{
+  position: absolute;
+  content: "";
+  top: 0;
+  z-index: -1;
 }
-@font-face {
-  font-family: 'DroidKufi-Regular';
-  src: url(../fonts/DroidKufi-Regular.ttf);
+.frame::after{
+  left: 50%;
+  right: 0;
+  height: calc(100% - 32px);
+  background-color: #343A40;
+  transform: translateY(16px) translateX(20px);
+  -webkit-transform: translateY(16px) translateX(20px);
+  -moz-transform: translateY(16px) translateX(20px);
+  -ms-transform: translateY(16px) translateX(20px);
+  -o-transform: translateY(16px) translateX(20px);
+}
+.frame::before{
+  left: 0;
+  right: 50%;
+  bottom: 0;
+  border-width: 1rem 0 1rem 1rem;
+  border-style: solid;
+  border-color:#343A40;
+  border-start-start-radius: .5rem;
+  border-end-start-radius: .5rem;
+  transform:  translateX(20px);
+  -webkit-transform:  translateX(20px);
+  -moz-transform:  translateX(20px);
+  -ms-transform:  translateX(20px);
+  -o-transform:  translateX(20px);
+}
+.frame .image{
+ padding-top: 2.5rem;
+ padding-bottom: 1rem;
+ padding-inline: 3rem;
+ width: 100%;
 }
