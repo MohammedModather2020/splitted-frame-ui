@@ -1,0 +1,53 @@
+/* 
+* Challenge Name    : عمل اطار منقسم
+* Start Date        : 21-2-2022
+* Last Update       : 21-2-2022
+* End Date          : 21-2-2022
+* Contact Us        : mohammedmodather144@gmail.com
+* Git Hub url       : https://github.com/MohammedModather2020
+*/
+/* 
+* 1- General Style
+   1.0- Universal Element
+   1.1- Body Style
+* 2- Section Style
+   2.0- 
+* 3- Common Style 
+   3.0- Container Section
+   3.1-  Font Family
+*/
+/** 1- General Style */
+/**  1.0- Universal Element */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/** 1.1- Body Style */
+body{
+  font-family: 'DroidKufi-Regular', sans-serif;
+  background-color: #F6F6F6;
+}
+/** 2- Section Style */
+/**  2.0-  */
+
+
+
+
+
+/**3- Common Style  */
+/** 3.0- Container Section */
+.container{
+  width: 80%;
+  margin: auto;
+  padding: .2rem;
+}
+/** 3.1- Font Family */
+@font-face {
+  font-family: 'DroidKufi-Bold';
+  src: url(../fonts/DroidKufi-Bold.ttf);
+}
+@font-face {
+  font-family: 'DroidKufi-Regular';
+  src: url(../fonts/DroidKufi-Regular.ttf);
+}
